@@ -1,0 +1,5 @@
+>I am amazed at how far we've come in the last few years with Generative AI technologies. In some areas, the work from these models is indistinguishable from what you would expect a human to output. In other areas, it feels artificial (who can blame it if it's in its name) and fabricated. I think I would be doing myself and by extension you, the reader, a huge disservice if I didn't use AI's strengths to my advantage. However I am a big believer in two things: real engineering and authenticity. So the extent of my AI usage is limited to a tool that only accelerates my learning, prototyping, and design processes, where I will remain the master architect. My thoughts will be strictly my own, such as this post, but should there be any AI generated content that I use directly, I will make it my responsibility to let you know.
+
+This was not AI generated.
+
+-- Oscar
