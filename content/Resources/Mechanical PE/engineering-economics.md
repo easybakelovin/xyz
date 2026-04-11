@@ -52,7 +52,7 @@ $$
 <iframe
   src="/static/econ/index.html"
   width="100%"
-  height="600"
+  height="700"
   style="border: none; border-radius: 8px;"
   allowFullScreen>
 </iframe>
