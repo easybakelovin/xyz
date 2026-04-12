@@ -2,42 +2,69 @@
 function showInlinePlot(canvasId, labels, data, label, color) {
     const canvas = document.getElementById(canvasId);
     if (!canvas) return;
-    // Remove previous chart instance if any
+
     if (!window._inlineCharts) window._inlineCharts = {};
+
     if (window._inlineCharts[canvasId]) {
         window._inlineCharts[canvasId].destroy();
     }
+
     const ChartLib = window.Chart || Chart;
+
     window._inlineCharts[canvasId] = new ChartLib(canvas, {
         type: 'line',
         data: {
-            labels: labels,
+            labels,
             datasets: [{
-                label: label,
-                data: data,
-                borderColor: '#6c63ff', // soft blue
+                label,
+                data,
+                borderColor: color || '#6c63ff',
                 backgroundColor: 'rgba(108,99,255,0.10)',
                 fill: true,
                 tension: 0.3,
                 pointRadius: 3,
-                pointBackgroundColor: '#6c63ff',
+                pointBackgroundColor: color || '#6c63ff',
                 pointBorderColor: '#fff',
                 pointHoverRadius: 5,
-                pointHoverBackgroundColor: '#ffb347', // soft orange highlight
+                pointHoverBackgroundColor: '#ffb347',
             }]
         },
         options: {
-            responsive: false,
+            responsive: true,
+            maintainAspectRatio: false,
             plugins: {
-                legend: { labels: { color: '#444', font: { size: 14, family: 'Segoe UI, Arial, sans-serif' } } },
-                tooltip: { backgroundColor: '#fff', titleColor: '#444', bodyColor: '#444', borderColor: '#eee', borderWidth: 1 }
+                legend: {
+                    labels: {
+                        color: '#444',
+                        font: {
+                            size: 14,
+                            family: 'Segoe UI, Arial, sans-serif'
+                        }
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#444',
+                    bodyColor: '#444',
+                    borderColor: '#eee',
+                    borderWidth: 1
+                }
             },
             layout: { padding: 10 },
             scales: {
-                x: { ticks: { color: '#888', font: { size: 12 } }, grid: { color: '#eee' } },
-                y: { 
-                    beginAtZero: true, // always start at 0
-                    ticks: { color: '#888', font: { size: 12 } },
+                x: {
+                    ticks: {
+                        color: '#888',
+                        font: { size: 12 }
+                    },
+                    grid: { color: '#eee' }
+                },
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: '#888',
+                        font: { size: 12 }
+                    },
                     grid: { color: '#eee' }
                 }
             }

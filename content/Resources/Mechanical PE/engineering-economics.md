@@ -50,12 +50,16 @@ $$
 ## Example
 
 <iframe
-  src="/static/econ/index.html"
-  width="100%"
-  height="900"
-  style="border: none; border-radius: 8px;"
-  allowFullScreen>
-</iframe>
+  src="/static/econ/"
+  style="
+    width: 100%;
+    height: 900px;
+    border: none;
+    display: block;
+    overflow: hidden;
+  "
+  scrolling="no"
+></iframe>
 
 ## Practice
 *Coming soon..*
