@@ -7,7 +7,7 @@ publish: true
 
 # Artemis
 
-Interactive Zig game running on WASM. Use your browser's developer tools (F12) to see console output.
+Interactive Zig game running on WASM. Still a WIP..
 
 <iframe 
   src="/static/artemis/index.html" 
